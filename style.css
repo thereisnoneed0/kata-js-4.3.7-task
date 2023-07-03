@@ -1,0 +1,129 @@
+@import url('./normalize.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+ul {
+    margin: auto;  
+   }
+
+.app {     margin: auto;
+    padding: 25px;
+    width: 659px; 
+    background-color: #C4C4C4;
+}
+
+.title { text-align: center; }
+.main {
+       align-items: flex-end;
+       flex-direction: column;
+       display: flex; }
+   
+.search-line {
+       flex-direction: column;
+       display: flex;
+       width: 100%;
+       margin: 0 auto;
+       height:62px;
+   }
+.search-input {
+    margin: auto;
+    width:500px;
+   
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1 ;
+    margin-bottom: 2px;
+    height: 40px;
+    line-height: 20px;
+    padding: 8px 15px;
+
+    font-size: 46px;
+   }   
+
+.users {
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.userListSuggest{
+   padding-left:0px;  
+}
+.userListPicked{
+    padding-left:0px; 
+    margin-top: 40px; 
+}
+.prev-repo{
+    padding: 7px;
+    width: 500px;
+    height: 45px;
+    display:block;
+    border: 1px solid black;
+    background-color: #E3E3E3;
+    font-size: 30px;
+}
+.prev-repo:hover{
+    background-color: #65CDF9;
+    transition: all 0.4s ease-out;
+}
+.ul-elements{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.picked-element{
+    position: relative;
+    font-size: 24px;
+    padding: 6px;
+    background-color: #E27BEB;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 503px;
+    height: 101px;
+    
+}
+
+.cross-btn-left{
+    position: absolute;
+    right: 30px;
+    top: 18px;
+    width: 50px;
+    height: 50px;
+}
+.cross-btn-right{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+
+/* .user {
+    padding-left: 100px;
+    width: 50%;
+}   */
+
+/* .prev-repo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    width: calc(100% / 5 - 20px);
+} */
