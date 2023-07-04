@@ -52,8 +52,8 @@ export default class View {
   makeBtn(parent) {
     const imageCrossLeft = this.createElem("img", "cross-btn-left")
     const imageCrossRight = this.createElem("img", "cross-btn-right")
-    imageCrossLeft.src = "../assets/Vector 8.png"
-    imageCrossRight.src = "../assets/Vector 7.png"
+    imageCrossLeft.src = "./assets/Vector 8.png"
+    imageCrossRight.src = "./assets/Vector 7.png"
     parent.append(imageCrossLeft, imageCrossRight)
   }
 
