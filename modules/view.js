@@ -35,7 +35,11 @@ export default class View {
     if (x.length > 4) x.forEach((el) => el.remove())
     const repoElement = this.createElem("li", "prev-repo")
     repoElement.innerHTML = data.name
-    repoElement.addEventListener("click", (e) => this.makeRepo(data))
+    repoElement.addEventListener("click", (e) =>{
+      this.makeRepo(data)
+      this.searchInput.value = ""
+       
+    })
     this.userListSuggest.append(repoElement)
   }
 
