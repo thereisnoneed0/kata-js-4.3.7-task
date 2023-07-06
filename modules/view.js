@@ -30,7 +30,7 @@ export default class View {
     return element
   }
   createRepos(data) {
-    console.log(data)
+    
     let x = document.querySelectorAll("li")
     if (x.length > 4) x.forEach((el) => el.remove())
     const repoElement = this.createElem("li", "prev-repo")
@@ -38,6 +38,7 @@ export default class View {
     repoElement.addEventListener("click", (e) =>{
       this.makeRepo(data)
       this.searchInput.value = ""
+      this.userListSuggest.innerHTML = ""
        
     })
     this.userListSuggest.append(repoElement)
