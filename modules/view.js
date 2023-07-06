@@ -15,7 +15,11 @@ export default class View {
     this.main.append(this.userListSuggest, this.userListPicked)
 
     this.app.append(this.title, this.searchLine, this.main)
-    // хотел повесить слушателя на весь список ,а не прикручивать сушатель к каждому <li>
+    this.userListSuggest.addEventListener("click", (e) => {
+      if ((e.target.className = "prev-repo")) {
+        e.target.remove()
+      }
+    })
     this.userListPicked.addEventListener("click", (e) => {
       if (e.target.className === "cross-btn-right") {
         e.target.parentNode.remove() //тут надо удаляять не e.target потому что он просто будет крест удалять а сам элемент ul или li
