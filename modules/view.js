@@ -33,19 +33,20 @@ export default class View {
     elemClass ? element.classList.add(elemClass) : ""
     return element
   }
-  createRepos(data) {
-    
+createRepos(data) {
     let x = document.querySelectorAll(".prev-repo")
-    if (x.length > 4) x.forEach((el) => el.remove())
+    console.log(x, "XXXXX")
+    if (x.length >= 5) {
+      x[x.length - 1].remove() // Удалить только последний элемент
+    }
+
     const repoElement = this.createElem("li", "prev-repo")
     repoElement.innerHTML = data.name
-    repoElement.addEventListener("click", (e) =>{
+    repoElement.addEventListener("click", (e) => {
       this.makeRepo(data)
       this.searchInput.value = ""
-       
-       
     })
-    this.userListSuggest.append(repoElement)
+    this.userListSuggest.prepend(repoElement) // Используйте prepend вместо append
   }
 
   makeRepo(data) {
