@@ -31,7 +31,7 @@ export default class View {
   }
   createRepos(data) {
     
-    let x = document.querySelectorAll("li")
+    let x = document.querySelectorAll(".prev-repo")
     if (x.length > 4) x.forEach((el) => el.remove())
     const repoElement = this.createElem("li", "prev-repo")
     repoElement.innerHTML = data.name
