@@ -38,7 +38,7 @@ export default class View {
     repoElement.addEventListener("click", (e) =>{
       this.makeRepo(data)
       this.searchInput.value = ""
-      this.userListSuggest.innerHTML = ""
+       
        
     })
     this.userListSuggest.append(repoElement)
