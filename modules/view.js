@@ -15,10 +15,9 @@ export default class View {
     this.main.append(this.userListSuggest, this.userListPicked)
 
     this.app.append(this.title, this.searchLine, this.main)
-    this.userListSuggest.addEventListener("click", (e) => {
-      if ((e.target.className = "prev-repo")) {
-        e.target.remove()
-      }
+     this.userListSuggest.addEventListener("click", (e) => {
+      let x = document.querySelectorAll(".prev-repo")
+      if (x.length >= 5) x.forEach((el) => el.remove()) // Удалить только последний элемент
     })
     this.userListPicked.addEventListener("click", (e) => {
       if (e.target.className === "cross-btn-right") {
