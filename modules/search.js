@@ -1,3 +1,5 @@
+const regSpace = /\s+/
+
 export default class Search {
   constructor(view, api) {
     this.view = view
@@ -11,7 +13,7 @@ export default class Search {
   searchRepos() {
     const inputValue = this.view.searchInput.value
     if (inputValue) {
-      this.api.loadRepos(inputValue).then((res) => {
+    !regSpace.test(inputValue) &&  this.api.loadRepos(inputValue).then((res) => {
         if (res.ok)
           res
             .json()
